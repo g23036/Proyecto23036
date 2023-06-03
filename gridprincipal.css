@@ -1,0 +1,324 @@
+
+      /*ACA TENEMOS LOS DOS GRID UTILIZADOS*/
+      .container {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(3, 1fr) 2fr 2fr;
+        grid-gap: 1rem;
+        grid-template-areas:
+          "LOGO LOGO HEADER HEADER HEADER HEADER HEADER HEADER TRADUCCION TRADUCCION"
+          "LOGO LOGO HEADER HEADER HEADER HEADER HEADER HEADER TRADUCCION TRADUCCION"
+          "AREA1 AREA1 AREA1 AREA1 AREA1 AREA1 AREA2 AREA2 AREA2 AREA2"
+          "AREA1 AREA1 AREA1 AREA1 AREA1 AREA1 AREA2 AREA2 AREA2 AREA2"
+          "AREA1 AREA1 AREA1 AREA1 AREA1 AREA1 AREA2 AREA2 AREA2 AREA2"
+          "AREA3 AREA3 AREA3 AREA3 AREA4 AREA4 AREA4 AREA4 AREA4 AREA4"
+          "AREA3 AREA3 AREA3 AREA3 AREA4 AREA4 AREA4 AREA4 AREA4 AREA4"
+          "AREA3 AREA3 AREA3 AREA3 AREA4 AREA4 AREA4 AREA4 AREA4 AREA4"
+          "AREA5 AREA5 AREA5 AREA5 AREA5 ARE6 ARE6 ARE6 ARE6 ARE6"
+          "AREA5 AREA5 AREA5 AREA5 AREA5 ARE6 ARE6 ARE6 ARE6 ARE6"
+          "AREA5 AREA5 AREA5 AREA5 AREA5 ARE6 ARE6 ARE6 ARE6 ARE6"
+          "FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER"
+          "FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER"
+          "FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER"
+          "PIE PIE PIE PIE PIE PIE PIE PIE PIE PIE";
+      }
+      
+      .LOGO { grid-area: LOGO; }
+      
+      .HEADER { grid-area: HEADER; }
+      
+      .TRADUCCION { grid-area: TRADUCCION; }
+      
+      .AREA1 { grid-area: AREA1; }
+      
+      .AREA2 { grid-area: AREA2; }
+      
+      .AREA3 { grid-area: AREA3; }
+      
+      .AREA4 { grid-area: AREA4; }
+      
+      .AREA5 { grid-area: AREA5; }
+      
+      .ARE6 { grid-area: ARE6; }
+      
+      .FOOTER { grid-area: FOOTER; }
+
+      .PIE { grid-area: PIE;}
+    
+      .bienvenidos { display: none;}
+      
+      @media (max-width: 768px) {
+        .bienvenidos {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 24px;
+          color: black;
+          grid-area: HEADER;
+        }
+        .container {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-areas:
+            "LOGO"
+            "HEADER"
+            "TRADUCCION"
+            "AREA1" 
+            "AREA2"
+            "AREA4"
+            "AREA3" 
+            "AREA5" 
+            "ARE6"
+            "FOOTER"
+            "PIE";
+            grid-gap: 0rem;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .container {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "LOGO"
+            "bienvenidos"
+            "TRADUCCION"
+            "HEADER"
+            "AREA1"
+            "AREA2"
+            "AREA4"
+            "AREA3"
+            "AREA5"
+            "ARE6"
+            "FOOTER"
+            "PIE";
+          grid-gap: 0rem;
+        }
+      }
+      
+      
+      .container0 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        gap: 10px;
+        grid-template-areas:
+          "ubicacion"
+          "sociales"
+          "contacto"
+          "demas";
+      }
+      
+      .ubicacion { grid-area: ubicacion; }
+      
+      .sociales { grid-area: sociales; }
+      
+      .contacto { grid-area: contacto; }
+      
+      .demas { grid-area: demas; }
+      
+      @media screen and (min-width: 600px) {
+        .container0 {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto auto;
+          gap: 10px;
+          grid-template-areas:
+            "ubicacion contacto"
+            "sociales demas";
+        }
+      }
+      
+      @media screen and (min-width: 900px) {
+        .container0 {
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr;
+          gap: 5px;
+          grid-template-areas:
+            "ubicacion sociales contacto demas";
+        }
+      } /*Aca tenemos los contenedores desde Area 1 al Area 4*/
+      .grid-container1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+      }
+  
+      .grid-item1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+  
+      .grid-item1 img {
+        max-width: 100%;
+        height: 100%;
+      }
+  
+      img {
+        opacity: 1;
+        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+      }
+  
+      .grid-container2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+      }
+  
+      .text-container2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        padding: 10px;
+      }
+  
+      .grid-container3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+      }
+  
+      .text-container3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        padding: 20px;
+      }
+  
+      .grid-container4 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+      }
+  
+      .grid-item4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden; 
+      }
+  
+      .grid-item4 img {
+        max-width: 100%;
+        height: 100%;
+      }
+  
+      img {
+        opacity: 1;
+        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+      }
+  
+      /* Media queries */
+      @media (max-width: 768px) {
+        .grid-container1,
+        .grid-container2,
+        .grid-container3,
+        .grid-container4 {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr;
+        }
+      }
+  
+      @media (max-width: 480px) {
+        .grid-container1,
+        .grid-container2,
+        .grid-container3,
+        .grid-container4 {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr;
+        }
+      }
+  /*Aca configuramos el container de los videos que usamos el mismo para los dos*/
+  .video-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .video-container::before {
+    content: "";
+    display: block;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 (9 dividido por 16 es 0.5625) */
+  }
+  
+  .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    /* Añade cualquier otro estilo necesario para tu grid */
+  }
+  
+  
+  @media (max-width: 768px) {
+    .video-container {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+    }
+  
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+    /*LAS ULTIMAS CELDAS DEL 2DO GRID*/
+    .sociales,
+  .contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+    
+  footer {
+		position:static;
+		height:10%;
+		line-height:60%;
+		margin-right:30%;
+		color:black;
+		text-align:center;
+		left:0;
+		max-width:300px ;
+	
+	  }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+    .grid-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden; 
+    }
+    .grid-item img {
+      max-width: 60%;
+      height: auto;
+      clip-path: ellipse(47.5% 50% at 50% 50%);
+    }
+    img {
+    opacity: 1;
+     }
+     @media screen and (max-width: 768px) {
+      .grid-item img {
+        max-width: 40%;
+        clip-path: ellipse(47.5% 50% at 50% 50%);;
+      }
+    } 

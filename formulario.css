@@ -1,0 +1,52 @@
+
+h1 {
+	height:50px;
+	line-height:50px;
+	background:#99CCFF;
+	color:black;
+	text-align:center;
+	left:0;
+	width:100%;
+}
+h2 {
+	height:50px;
+	line-height:50px;
+	color:purple;
+	text-align:left;
+	left:20px;
+	width:100%;
+}
+h3 {
+	height:50px;
+	line-height:50px;
+	color:purple;
+	text-align:left;
+	left:20px;
+	width:100%;
+}
+p{
+	height:50px;
+	color:black;
+	text-align:left;
+	left:0;
+	width:80%;
+}
+
+
+footer {
+  position:absolute;
+  height:50px;
+  line-height:50px;
+  background:#99CCFF;
+  color:black;
+  text-align:center;
+  left:0;
+  width:100%;
+}
+
+
+
+
+/*estilo para formulario*/
+
+

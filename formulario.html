@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+
+		<meta charset="UTF-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="gridformulario.css">
+		<link rel="stylesheet" href="todo.css">
+		<link rel="shortcut icon" href="imagenes/drone.png">
+		<title> Formulario de inscripciones</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+
+
+	</head>
+
+	<body >		
+		
+	<div class="container">
+		<div class="header">
+			<div class="tabs-container">
+                <div class="tabs">
+                  <button class="tab active" data-tab="tab1"><h1>| home |</h1></button>
+                  <button class="tab" data-tab="tab2"><h1>| quienes somos |</h1></button>
+                  <button class="tab" data-tab="tab3"><h1>| nuestro trabajo |</h1></button>
+                  <button class="tab" data-tab="tab4"><h1>| I & D</h1></button>
+                  <button class="tab" data-tab="tab5"><h1>| seminarios |</h1></button>
+                </div>
+                <div class="tab-content-container">
+                  <div class="tabcontent active" data-tab="tab1"><a href="PAPROBAR.HTML" target="_blank" ><h1>inicio</h1></a></div>
+                  <div class="tabcontent" data-tab="tab2"><a href="intento2.html" target="_blank" ><h1>somos</h1></a></div>
+                  <div class="tabcontent" data-tab="tab3"><a href="intento2.html" target="_blank" ><h1>algunos trabajos</h1></a></div>
+                  <div class="tabcontent" data-tab="tab4"><a href="inv.dis.html" target="_blank" ><h1>investigación y diseño</h1></a></div>
+                  <div class="tabcontent" data-tab="tab5"><a href="formulario.html" target="_blank" ><h1>inscripcion</h1></a></div>
+                </div>
+              </div>
+ 				<script src="todo.js"></script>
+		</div>
+		<div class="logo">
+			<div class="grid-container">
+                <div class="grid-item">
+                  <img src="segundologo.png">
+                </div>
+              </div>
+		</div>
+		<div class="traductor"> 
+			<h2>
+            <div class="language-button" onclick="toggleLanguage()">English</div> 
+         </h2>
+		 <script src="todo.js"></script>
+		</div>
+
+		<div class="body">
+			<div class="h3__divi"><h3 class="h3__form"> INSCRIBITE ACA!: </h3></div> 
+			<div class="form__borde">
+				<form action="mailto:andrea.rivarola.fernandezgmail.com" method="post">
+				<script src="js/validateadress.js"></script>
+				<u><b><i><p>FORMULARIO DE INSCRIPCION</p></i></b></u>
+					<ul>
+					<li>
+						<label for="name">Nombre:</label>
+						<input type="text" id="name" name="user_name" required>
+					</li>
+					<li>
+						<label for="edad">Edad:</label>
+						<input type="text" id="name" name="user_name" required>
+					</li>
+					<li>
+						<label for="contacto">Contacto:</label>
+						<input type="text" id="name" name="user_name" required>
+					</li>
+					<li>
+						<label for="mail">Email:</label>
+						<input type="email" id="mail" name="user_mail" >
+					</li>
+		
+					<li>Seleccione el curso al que desea inscribirse 
+			<select name="select">
+				<option value="Valor 1">Piloto de Drones</option>
+				<option value="Valor 2">Manejo de Software</option>
+				<option value="Valor 3">Sistema Procesador de Datos</option>
+			</select>
+		
+				<p><button type='submit' id='validate'>Enviar Inscripcion</button></p>
+		
+				<input type="hidden" name="_next" value="index.html">
+		
+			</form></div>
+		</div>
+		<div class="PIE"><h1> Copyright 2023©</h1></div>
+	  </div>
+
+
+
+
+
+</body>
+</html>
