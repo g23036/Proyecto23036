@@ -1,9 +1,8 @@
-
       /*ACA TENEMOS LOS DOS GRID UTILIZADOS*/
       .container {
         display: grid;
         grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(3, 1fr) 2fr 2fr;
+        grid-template-rows: auto;
         grid-gap: 1rem;
         grid-template-areas:
           "LOGO LOGO HEADER HEADER HEADER HEADER HEADER HEADER TRADUCCION TRADUCCION"
@@ -14,6 +13,7 @@
           "AREA3 AREA3 AREA3 AREA3 AREA4 AREA4 AREA4 AREA4 AREA4 AREA4"
           "AREA3 AREA3 AREA3 AREA3 AREA4 AREA4 AREA4 AREA4 AREA4 AREA4"
           "AREA3 AREA3 AREA3 AREA3 AREA4 AREA4 AREA4 AREA4 AREA4 AREA4"
+          "AREA7 AREA7 AREA7 AREA7 AREA7 AREA7 AREA7 AREA7 AREA7 AREA7"
           "AREA5 AREA5 AREA5 AREA5 AREA5 ARE6 ARE6 ARE6 ARE6 ARE6"
           "AREA5 AREA5 AREA5 AREA5 AREA5 ARE6 ARE6 ARE6 ARE6 ARE6"
           "AREA5 AREA5 AREA5 AREA5 AREA5 ARE6 ARE6 ARE6 ARE6 ARE6"
@@ -41,6 +41,14 @@
       
       .ARE6 { grid-area: ARE6; }
       
+      .AREA7 { grid-area: AREA7; }
+      
+      .AREA8 { grid-area: AREA8; }
+
+      .AREA9 { grid-area: AREA9; }
+
+      .AREA10 { grid-area: AREA10; }
+
       .FOOTER { grid-area: FOOTER; }
 
       .PIE { grid-area: PIE;}
@@ -57,8 +65,10 @@
           color: black;
           grid-area: HEADER;
         }
+        
         .container {
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(1, 2fr);
+          grid-template-rows: auto;
           grid-template-areas:
             "LOGO"
             "HEADER"
@@ -67,8 +77,9 @@
             "AREA2"
             "AREA4"
             "AREA3" 
+            "AREA7"
             "AREA5" 
-            "ARE6"
+            "ARE6" 
             "FOOTER"
             "PIE";
             grid-gap: 0rem;
@@ -78,6 +89,7 @@
       @media (max-width: 480px) {
         .container {
           grid-template-columns: 1fr;
+          grid-template-rows: 1fr;
           grid-template-areas:
             "LOGO"
             "bienvenidos"
@@ -87,6 +99,7 @@
             "AREA2"
             "AREA4"
             "AREA3"
+            "AREA7"
             "AREA5"
             "ARE6"
             "FOOTER"
@@ -95,18 +108,18 @@
         }
       }
       
-      
       .container0 {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto;
-        gap: 10px;
+        gap: 5px;
         grid-template-areas:
           "ubicacion"
           "sociales"
           "contacto"
           "demas";
       }
+      
       
       .ubicacion { grid-area: ubicacion; }
       
@@ -115,27 +128,60 @@
       .contacto { grid-area: contacto; }
       
       .demas { grid-area: demas; }
-      
-      @media screen and (min-width: 600px) {
+
+      .sociales1 {display: none;}
+
+      @media screen and (max-width: 480px) {
+        .container0 .sociales {
+          display: none; 
+        }
+       .sociales1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+       }
+      }
+         
+      @media screen and (min-width: 480px) {
         .container0 {
           grid-template-columns: 1fr 1fr;
           grid-template-rows: auto auto;
           gap: 10px;
           grid-template-areas:
             "ubicacion contacto"
-            "sociales demas";
+            "sociuales demas";
         }
+     
+     
+      }
+      @media screen and (min-width: 768px) {
+        .container0 {
+          grid-template-columns: auto;
+          grid-template-rows: auto;
+          gap: 5px;
+          grid-template-areas:
+            "ubicacion sociales"
+            " contacto demas";
+        }
+      
+     
       }
       
       @media screen and (min-width: 900px) {
         .container0 {
           grid-template-columns: 1fr 1fr 1fr 1fr;
-          grid-template-rows: 1fr;
+          grid-template-rows: auto;
           gap: 5px;
           grid-template-areas:
             "ubicacion sociales contacto demas";
         }
-      } /*Aca tenemos los contenedores desde Area 1 al Area 4*/
+       
+
+      } 
+
+      /*Aca tenemos los contenedores desde Area 1 al Area 4*/
       .grid-container1 {
         display: grid;
         grid-template-columns: 1fr;
@@ -171,6 +217,7 @@
         align-items: center;
         background-color: transparent;
         padding: 10px;
+        padding-top: 1%;
       }
   
       .grid-container3 {
@@ -184,7 +231,8 @@
         justify-content: center;
         align-items: center;
         background-color: transparent;
-        padding: 20px;
+        padding: 10px;
+        padding-top: 5%;
       }
   
       .grid-container4 {
@@ -239,7 +287,7 @@
   .video-container::before {
     content: "";
     display: block;
-    padding-bottom: 56.25%; /* Relación de aspecto 16:9 (9 dividido por 16 es 0.5625) */
+    padding-bottom: 56.25%; 
   }
   
   .video-container video {
@@ -253,9 +301,10 @@
   
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    /* Añade cualquier otro estilo necesario para tu grid */
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap
+    : 10px;
+    
   }
   
   
@@ -277,15 +326,44 @@
   }
   
     /*LAS ULTIMAS CELDAS DEL 2DO GRID*/
-    .sociales,
-  .contacto {
+    .sociales{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
   }
+  .contacto{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
     
+   
+    
+    color:rgb(0, 0, 0);
+    font-size: 14px;
+  }
+ 
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    
+  }
+  
+  .form-label {
+    width: 120px;
+    text-align: left;
+    margin-right: 10px;
+  }
+  
+  .form-input {
+    flex: 1;
+  }
+  
+  .form-button {
+    margin-top: 8px;
+  }
   footer {
 		position:static;
 		height:10%;
@@ -309,7 +387,7 @@
       overflow: hidden; 
     }
     .grid-item img {
-      max-width: 60%;
+      max-width: 100%;
       height: auto;
       clip-path: ellipse(47.5% 50% at 50% 50%);
     }
@@ -318,7 +396,15 @@
      }
      @media screen and (max-width: 768px) {
       .grid-item img {
-        max-width: 40%;
+        max-width: 100%;
         clip-path: ellipse(47.5% 50% at 50% 50%);;
       }
     } 
+  
+    
+    .AREA7 img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    
