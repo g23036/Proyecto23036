@@ -60,6 +60,7 @@
           grid-gap: 0rem;
       }
     }
+
     .sociales,
     .contacto {
       display: flex;
@@ -89,4 +90,21 @@
 .h3__divi{ 
 	font-family: 'Frijole', cursive;
 
+}
+.sociales{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.contacto{
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  
+ 
+  
+  color:rgb(0, 0, 0);
+  font-size: 14px;
 }
