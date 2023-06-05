@@ -16,9 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
-   
-
-    
+  
 </head>
 <body>
     <div class="container">
@@ -47,81 +45,50 @@
               </div>
               <script src="todo.js"></script>
         </div>
-        <div class="TRADUCCION"><h1>
-            <div class="language-button" onclick="toggleLanguage()">English</div> 
-          </h1>
-          <script src="todo.js"></script>
+        <div class="TRADUCCION">
+            <h1>
+                <div class="language-button" onclick="toggleLanguage()">English</div> 
+              </h1>
+              <script src="todo.js"></script>
         </div>
-        <div class="AREA1">Lorem ipsum dolor sit amet</br>, consectetur adipisicing elit. Quod, qui?</div>
-        <div class="AREA2">
-            <div class="carousel-container">
-                <div class="carousel">
-                    <div class="carousel-item">
-                        <video autoplay loop muted>
-                            <source src="videos/shot on 1.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="carousel-item">
-                        <video autoplay loop muted>
-                            <source src="videos/shot on 2.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="carousel-item">
-                        <video autoplay loop muted>
-                            <source src="videos/shot on 3.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                  
-                </div>
-        
-                <div class="carousel-controls">
-                    <button onclick="prevSlide()">&#10094;</button>
-                    <button onclick="nextSlide()">&#10095;</button>
-                </div>
-            </div>
-        
-            <script>
-                const carousel = document.querySelector('.carousel');
-                const carouselItems = document.querySelectorAll('.carousel-item');
-                const prevButton = document.querySelector('.carousel-controls button:first-child');
-                const nextButton = document.querySelector('.carousel-controls button:last-child');
-                const itemWidth = carouselItems[0].offsetWidth;
-                let currentIndex = 0;
-        
-                function nextSlide() {
-                    if (currentIndex === carouselItems.length - 1) {
-                        currentIndex = 0;
-                    } else {
-                        currentIndex++;
-                    }
-                    updateCarouselPosition();
-                }
-        
-                function prevSlide() {
-                    if (currentIndex === 0) {
-                        currentIndex = carouselItems.length - 1;
-                    } else {
-                        currentIndex--;
-                    }
-                    updateCarouselPosition();
-                }
-        
-                function updateCarouselPosition() {
-                    carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-                }
-        
-                prevButton.addEventListener('click', prevSlide);
-                nextButton.addEventListener('click', nextSlide);
-            </script>
-        </div>
-        <div class="AREA3">
-            <div class="grid-container">
-                <div class="grid-item"><img src="imagenes/drone transparente.png"></a>
-                </div>
-              </div>
+        <div class="AREA1"> <h1>Somos una empresa Argentina, dedicada a brindar alternativas eficientes a distintas actividades. </h1></div>
+        <div class="AREA3"><h2>Soluciones electricas: </h2></br>
+        <h1>
+            Las soluciones dron recopilan datos precisos y pormenorizados relativos a todas las secciones de la red, con lo que se automatizan las inspecciones, se posibilitan las reparaciones dentro de plazo y se reduce el tiempo de inactividad.
+        </h1>
         </div>
         <div class="AREA4">
-            
+            <div class="grid-container1">
+                <div class="grid-item1">
+                  <img src="imagenes/energia2.jpg">
+                </div>
+                </div>
+        </div>
+        <div class="AREA2">
+            <div class="grid-container1">
+                <div class="grid-item1">
+                  <img src="imagenes/energia1.jpg">
+                </div>
+                </div>
+        </div>
+        <div class="AREA5"> 
+            <h2>Soluciones petroleras:</h2>
+               <h1> La ejecución de inspecciones y tareas de supervisión de seguridad rutinarias mediante drones mejora la eficiencia sin detener las operaciones ni poner en peligro la seguridad del personal.
+            </h1>
+            </div>
+        <div class="AREA6">
+            <div class="grid-container1">
+                <div class="grid-item1">
+                  <img src="imagenes/petroleo1.jpg">
+                </div>
+                </div>
+        </div>
+        <div class="AREA7">
+            <div class="grid-container1">
+                <div class="grid-item1">
+                  <img src="imagenes/petroleo2.jpg">
+                </div>
+                </div>
         </div>
         <div class="FOOTER">
             <div class="container0">
@@ -197,6 +164,5 @@
             <h1>  © 2023 Drones Codo a Codo· - All rights reserved.</h1>
         </div>
       </div>
-      
 </body>
 </html>
