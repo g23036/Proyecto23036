@@ -1,0 +1,188 @@
+.container {  display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows:auto;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: row;
+    align-content: space-around;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-areas:
+      "LOGO LOGO HEADER HEADER HEADER HEADER HEADER HEADER TRADUCCION TRADUCCION"
+      "LOGO LOGO HEADER HEADER HEADER HEADER HEADER HEADER TRADUCCION TRADUCCION"
+      "AREA1 AREA1 AREA1 AREA1 AREA1 AREA1 AREA1 AREA1 AREA1 AREA1"
+      ". AREA2 AREA2 AREA2 AREA2 AREA3 AREA3 AREA3 AREA3 ."
+      ". AREA2 AREA2 AREA2 AREA2 AREA3 AREA3 AREA3 AREA3 ."
+      ". . . AREA4 AREA4 AREA4 AREA4 . . ."
+      ". . . AREA4 AREA4 AREA4 AREA4 . . ."
+      "FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER"
+      "FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER"
+      "PIE PIE PIE PIE PIE PIE PIE PIE PIE PIE";
+    width: 100%;
+    height: 100%;
+  }
+  
+  .LOGO { grid-area: LOGO; }
+  
+  .HEADER { grid-area: HEADER; }
+  
+  .TRADUCCION { grid-area: TRADUCCION; }
+  
+  .AREA1 { grid-area: AREA1; }
+  
+  .AREA2 { grid-area: AREA2; }
+  
+  .AREA3 { grid-area: AREA3; }
+  
+  .AREA4 { grid-area: AREA4; }
+  
+  .FOOTER { grid-area: FOOTER; }
+  
+  .PIE { grid-area: PIE; }
+ 
+
+  .container0 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 5px;
+    grid-template-areas:
+      "ubicacion"
+      "sociales"
+      "contacto"
+      "demas";
+  }
+  
+  
+  .ubicacion { grid-area: ubicacion; }
+  
+  .sociales { grid-area: sociales; }
+  
+  .contacto { grid-area: contacto; }
+  
+  .demas { grid-area: demas; }
+
+  .sociales1 {display: none;}
+
+  @media screen and (max-width: 480px) {
+    .container0 .sociales {
+      display: none; 
+    }
+   .sociales1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+   }
+  }
+     
+  @media screen and (min-width: 480px) {
+    .container0 {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 10px;
+      grid-template-areas:
+        "ubicacion contacto"
+        "sociales demas";
+    }
+ 
+ 
+  }
+  @media screen and (min-width: 768px) {
+    .container0 {
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      gap: 5px;
+      grid-template-areas:
+        "ubicacion sociales"
+        " contacto demas";
+    }
+  
+ 
+  }
+  
+  @media screen and (min-width: 900px) {
+    .container0 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 5px;
+      grid-template-areas:
+        "ubicacion sociales contacto demas";
+    }
+}
+
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .carousel-item {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .carousel-item video {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto; 
+    }
+
+    .carousel-controls {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .carousel-controls button {
+        margin: 0 5px;
+        padding: 5px 10px;
+    }
+    .sociales{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .contacto{
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        flex-direction: column;
+        
+       
+        
+        color:rgb(0, 0, 0);
+        font-size: 14px;
+      }
+     
+      .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        
+      }
+      
+      .form-label {
+        width: 120px;
+        text-align: left;
+        margin-right: 10px;
+      }
+      
+      .form-input {
+        flex: 1;
+      }
+      
+      .form-button {
+        margin-top: 8px;
+      }
