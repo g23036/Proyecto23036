@@ -163,43 +163,6 @@
     }
 }
 
-    .carousel-container {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .carousel {
-        display: flex;
-        transition: transform 0.4s ease-in-out;
-    }
-
-    .carousel-item {
-        flex: 0 0 100%;
-        width: 100%;
-    }
-
-    .carousel-item video {
-        max-width: 100%;
-        height: auto;
-        margin: 0 auto; 
-    }
-
-    .carousel-controls {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        z-index: 1;
-    }
-
-    .carousel-controls button {
-        margin: 0 5px;
-        padding: 5px 10px;
-    }
     .sociales{
         display: flex;
         flex-direction: column;
