@@ -32,8 +32,8 @@ a {
 
 h1 {
   font-family: 'Quicksand', sans-serif;
-	height:50px;
-	line-height:50px;
+	height:auto;
+	line-height:auto;
 	color:rgb(24, 24, 24);
 	text-align:center;
 	left:0;
